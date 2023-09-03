@@ -1,6 +1,5 @@
-
 import pandas as pd
-data = pd.read_excel('C:/Users/Administrator/Desktop/RightelInternet.xlsx', header=0)
+data = pd.read_excel('C:/Users/LENOVO/Desktop/RightelInternet.xlsx')
 question=data["assistant_question"]
 yes_answer=data["user_yes_answer"]
 no_answer=data["user_no_answer"]
@@ -12,7 +11,7 @@ h=question.count()
 f[1]=0
 key1=True
 while key1:
-    for i in range(h):
+        i=0
         if f[i]==0:
             print(question[i])
             answer=input(" لطفا جواب بله یا خیر را وارد نمایید   ")
@@ -24,17 +23,8 @@ while key1:
                 print(question[count1])
             else:
                 print("enter correct answer")
+            break
     
         else:
             print(question[i])
             key1=False
-    
-
-
-
-
-
-
-
-
-
