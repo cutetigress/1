@@ -10,22 +10,25 @@ f=data["is_answer"]
 g=input("لطفا سوال خود را وارد نمایید:")
 h=question.count()
 f[1]=0
-for i in range(h):
-    if f[i]==0:
-        print(question[i])
-        answer=input(" لطفا جواب بله یا خیر را وارد نمایید   ")
-        if answer=="بله":
-            count1=step_yes[i]
-            print(question[count1])
-        elif answer=="خیر":
-            count1 = step_no[i]
-            print(question[count1])
+key1=True
+while key1:
+    for i in range(h):
+        if f[i]==0:
+            print(question[i])
+            answer=input(" لطفا جواب بله یا خیر را وارد نمایید   ")
+            if answer=="بله":
+                count1=step_yes[i]
+                print(question[count1])
+            elif answer=="خیر":
+                count1 = step_no[i]
+                print(question[count1])
+            else:
+                print("enter correct answer")
+    
         else:
-            print("enter correct answer")
-
-    else:
-        print(question[i])
-
+            print(question[i])
+            key1=False
+    
 
 
 
